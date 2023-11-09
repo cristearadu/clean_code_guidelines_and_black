@@ -1,0 +1,21 @@
+https://github.com/zedr/clean-code-python
+
+1. Meaningful and pronounceable variable names
+2. Use the same vocabulary for the same type of variable
+3. Use searchable names
+4. Use explanatory variable
+5. Avoid mental mapping (school system iterations)
+6. Don't add unnecessary context
+7. Use default arguments instead of short circuiting or conditionals
+8. Functions should do one thing
+9. Function arguments -> 2 or fewer
+10. Function names should say what they do
+11. Functions should only be one level of abstraction
+12. Don't use flags as function parameters
+13. Avoid side effects
+14. Single Responsability Priciple (SRP)
+15. Open/Closed Principle (OCP)
+    “Incorporate new features by extending the system, not by making modifications (to it)”
+16. Dependency Inversion Principle (DIP)
+    “Depend upon abstractions, not concrete details”
+17. Don't Repeat Yourself (DRY)

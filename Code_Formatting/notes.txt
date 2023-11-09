@@ -1,0 +1,21 @@
+Black
+    - open source code formatter for py
+    - pep8 compliant
+    - black {source_file or directory} or python -m black {source_file or directory}
+    - improve code readability
+    - Line Length (by default maximum 88)-> black --line-length 120 {source_file}
+    - pyproject.toml -> to exclude certain files or directories
+        [tool.black]
+        line-length = 120
+        exclude = "\.git|\.venv|_build|build|dist|node_modules"
+    - focuses on reformatting the code within the constraints of the PEP 8 style guide and maintaining the existing structure and order of the code as much as possible.
+
+    - Issues
+        - Black's formatting choices might not align with your team's specific coding standards.
+
+Autopep8 - reformat your code to conform to PEP 8
+         - flexible when it comes to reordering import statements
+         -  autopep8 --in-place --aggressive --aggressive {source_file}
+            - in-place: make the formatting changes directly to the input file
+            - aggressive (1st): more formatting, such as  This can include reordering import statements, adjusting whitespace, and other changes that aim to improve code readability
+            - aggressive (2nd): uncommon to use

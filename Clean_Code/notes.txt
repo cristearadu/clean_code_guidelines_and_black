@@ -1,0 +1,52 @@
+
+- PEP 8
+- meaningful names for variables, classes, functions etc
+    good: number_of_users = 10
+    bad: x = 10
+
+- consistent indentation: use tab, not whitespaces
+- line length limit: lines of code under 79 characters(PEP 8), and use continuation lines (backslashes) or parentheses for line breaks when necessary
+- code documentation: numpydoc or Google style (preferred) for docstrings.
+
+   def two_numbers_sum(a, b):
+       """
+       Function that adds two numbers
+
+       Args:
+           a (int): The first number.
+           b (int): The second number.
+
+       Returns:
+           int: The sum of a and b.
+       """
+       return a + b
+
+- avoid magic numbers: replace magic numbers with named constants or variables to make your code more understandable.
+   good:
+       MAX_RETRY_COUNT = 3
+       for _ in range(MAX_RETRY_COUNT):
+           # etc
+   bad:
+       for _ in range(3):
+           # etc
+
+- break code into functions. keep the functions small and focused on a single task. function is getting too long? ==> split into smaller manageable functions
+
+- avoid deep nesting: deeply nested code can be hard to read and understand (use when necessary)
+
+- DRY Principle: don't repeat yourself. Reuse code by creating functions or classes, or dynamic principles instead of duplicating the same logic.
+- error handling: treat errors gracefully with meaningful error messages. Don't use except only...
+- use when possible:
+
+   good: squares = [x ** 2 for x in range(10)]
+
+   bad:
+       squares = []
+       for x in range(10):
+           squares.append(x ** 2)
+
+
+- test your own code
+- use a version control system to keep track of changes
+
+- refactor: continuously refactor your code to improve its structure and readability
