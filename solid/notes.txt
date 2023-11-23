@@ -1,0 +1,75 @@
+https://gist.github.com/dmmeteo/f630fa04c7a79d3c132b9e9e5d037bfd
+
+The SOLID principle helps in reducing tight coupling. Tight coupling means a group of classes
+are highly dependent on one another which you should avoid in your code.
+
+Opposite of tight coupling is loose coupling and your code is considered as a good code when it has
+ loosely-coupled classes. Loosely coupled classes minimize changes in your code, helps in making code more
+ reusable, maintainable, flexible and stable.
+
+1. Single Responsibility Principle (SRP)
+    - every class should have a single responsibility or single job or single purpose
+    - if a class has more than one responsibility, it becomes coupled
+
+2. Open/Closed Principle (OCP)
+    - software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification
+    - extend a class behavior, without modifying it
+    - Story:
+
+       Suppose developer A needs to release an update for a library or framework and developer B wants some modification
+        or add some feature on that then developer B is allowed to extend the existing class created by developer
+        A but developer B is not supposed to modify the class directly.
+        Using this principle separates the existing code from the modified code so it provides better stability,
+        maintainability and minimizes changes as in your code.
+
+3. Liskov’s Substitution Principle (LSP)
+    - any class that is the child of a parent class should be usable in place of its parent without any unexpected behavior
+    - if a class S is a subclass of T, an object of class T should be replaceable with an object of class S without
+      affecting the desirable properties of the program
+
+    - Story:
+        One of the classic examples of this principle is a rectangle having four sides.
+        A rectangle’s height can be any value and width can be any value.
+        A square is a rectangle with equal width and height.
+        So we can say that we can extend the properties of the rectangle class into square class.
+        In order to do that you need to swap the child (square) class with parent (rectangle) class to fit the
+        definition of a square having four equal sides but a derived class does not affect the behavior of the
+        parent class so if you will do that it will violate the Liskov Substitution Principle.
+
+
+4. Interface Segregation Principle (ISP)
+    - do not force any client to implement an interface which is irrelevant to them
+
+5. Dependency Inversion Principle (DIP)
+    - high-level modules/classes should not depend on low-level modules/classes. both should depend upon abstractions
+    - abstractions should not depend upon details. details should depend upon abstractions
+
+
+
+QA AUTOMATION APPLICATION
+
+1. Single Responsibility Principle (SRP)
+    - each module or class within the FW should have only one reason to change
+    - ex: separate classes/modules for handling test data, managing test configuration,
+          interacting with the application, reporting test results
+
+2. Open/Closed Principle (OCP)
+    - you should be able to add new tests or features without modifying the existing test scripts
+    - design your framework so that it's easy to extend with new test cases or functionalities without
+      altering the existing codebase
+
+3. Liskov' Substituion Principle (LSP)
+    - being able to replace one test case with another without causing unexpected issues,
+    as long as they adhere to the same interface and fulfill the same test objectives.
+
+4. Interface Segregation Principle (ISP)
+    - having different types of tests (UI, API, Mobile) needs to SEPARATE interfaces for UI-related actions,
+      API-related actions, allowing test classes to implement only what they need
+
+5. Dependency Inversion Principle (DIP)
+    - high-level modules = test scenarios / business logic
+    - low-level modules = handling specific implementations
+            -> browser (selenium)
+            -> mobile devices (appium)
+            -> data sources
+            -> rest APis etc
